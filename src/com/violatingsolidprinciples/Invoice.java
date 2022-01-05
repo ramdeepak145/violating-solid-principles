@@ -11,7 +11,7 @@ public class Invoice {
     }
     public Integer bill()
     {
-        int total= ran.nextInt(1000) * order.orderQuantity();
+        int total= ran.nextInt(1000) * order.orderQuantity(order);
         return total;
     }
 }
