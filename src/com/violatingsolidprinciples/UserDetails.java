@@ -1,20 +1,20 @@
 package com.violatingsolidprinciples;
 
 public class UserDetails {
-    private String email,password,user_name,phonenumber;
+    private String email,password,userName,phoneNumber;
 
-    public UserDetails(String email,  String user_name,String password,String phonenumber) {
+    public UserDetails(String email,  String userName,String password,String phoneNumber) {
         this.email = email;
         this.password = password;
-        this.user_name = user_name;
-        this.phonenumber=phonenumber;
+        this.userName = userName;
+        this.phoneNumber=phoneNumber;
     }
+    public UserDetails(){};
 
-    public UserDetails( String user_name,String password) {
+    public UserDetails( String userName,String password) {
         this.password = password;
-        this.user_name = user_name;
+        this.userName = userName;
     }
-
     public String getEmail() {
         return email;
     }
@@ -31,19 +31,19 @@ public class UserDetails {
         this.password = password;
     }
 
-    public String getUsername() {
-        return user_name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String user_name) {
-        this.user_name = user_name;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
-    public String getphonenum()
+    public String getphoneNum()
     {
-        return phonenumber;
+        return phoneNumber;
     }
-    public void setphonenum(String phonenumber)
+    public void setphoneNum(String phoneNumber)
     {
-        this.phonenumber=phonenumber;
+        this.phoneNumber=phoneNumber;
     }
 }

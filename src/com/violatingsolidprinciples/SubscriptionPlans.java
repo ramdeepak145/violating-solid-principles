@@ -1,6 +1,7 @@
 package com.violatingsolidprinciples;
 
-public abstract class SubscriptionPlans{
+//Violates Open/Closed by removing Abstract class
+public class SubscriptionPlans{
     int subscriptionId;
     String subscriptionDetails;
     public SubscriptionPlans(int subscriptionId, String subscriptionDetails)
@@ -8,7 +9,6 @@ public abstract class SubscriptionPlans{
         this.subscriptionId=subscriptionId;
         this.subscriptionDetails=subscriptionDetails;
     }
-    //Violates Liskov principles
     public int discount()
     {
         System.out.println("10% discount for subscribers paying above 14000");

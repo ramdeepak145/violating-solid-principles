@@ -1,13 +1,13 @@
 package com.violatingsolidprinciples;
 
 import java.util.ArrayList;
-public class User implements UserOps {
+public class User implements UserLogin{
 
     ArrayList<UserDetails> list=new ArrayList<>();
     @Override
     public boolean login(UserDetails data) {
 
-        if(data.getUsername().equals("ram") && data.getPassword().equals("1234")){
+        if(data.getUserName().equals("ram") && data.getPassword().equals("1234")){
             return true;
         }else {
             return false;
@@ -16,16 +16,13 @@ public class User implements UserOps {
 
     @Override
     public boolean register(UserDetails data) {
-        // if (email is valid) then storing into DB
         list.add(data);
         return true;
     }
 
     @Override
-    public void sendmail(UserDetails data) {
-        if(data.getEmail().equals("ram.deepak@gmail.com"))
-        {
-            System.out.println("mail is sending from this id:"+data.getEmail());
-        }
+    public String sendMailTo(UserDetails data) {
+            data.setEmail("manoj@gmail.com");
+            return data.getEmail();
     }
 }

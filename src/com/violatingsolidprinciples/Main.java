@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
 
         User userobj=new User();
+        UserDetails data=new UserDetails();
         userobj.register(new UserDetails("ram.deepak@gmail.com","ram","1234","8179967489"));
         if(userobj.login(new UserDetails("ram","1234"))) {
             System.out.println("Login successfull");
@@ -12,8 +13,8 @@ public class Main {
         else
         {
             System.out.println("Login failed");
-
         }
+        System.out.println("Sending Mail to User Id:"+userobj.sendMailTo(data));
         OrderHistory historyobj=new OrderHistory();
         Order orderobj=new OrderHistory();
         historyobj.custOrder(orderobj);
